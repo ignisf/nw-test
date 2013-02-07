@@ -1,0 +1,211 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+\usepackage{xecyr}
+\usepackage{polyglossia}
+\setmainlanguage{bulgarian}
+
+\usepackage{libertineotf}
+
+\usepackage{amsmath}
+\newtheorem{pr}{Задача}
+\newtheorem{q}{Въпрос}
+\newcommand\ans{Отг.: }
+\newcommand\rans{\hfill\ans}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+\newenvironment{itemize*}%
+  {\begin{itemize}%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{itemize}}
+
+\newenvironment{defractors}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\begin{document}
+
+\title{}
+\subtitle{\textrm{Вариант 2}}
+\author{}
+\date{}
+
+\begin{center}
+  Вариант №2
+\end{center}
+
+\begin{center}
+Име, административна група, факултетен номер:
+
+\end{center}
+
+\begin{center}
+..........................................................................................................................
+\end{center}
+
+\begin{q}
+  За кой протокол от слой №4 на OSI модела не са характерни потвържденията
+  (ack-nowledgements) и контрола на потока (flow control)?
+
+  \begin{defractors}
+  \item TCP
+  \item UDP
+  \item ICMP
+  \item ARP
+  \end{defractors}
+\end{q}
+
+\begin{q}
+  Кое от изброените твърдения е вярно за каналния слой на OSI модела?
+
+  \begin{defractors}
+    \item Пакетите са продукт на каналния слой.
+    \item Каналният слой е отговорен за сегментирането и реасемблирането на данните.
+    \item Маршрутизирането е имплементирано в каналния слой.
+    \item В каналния слой се дефинират хардуерните адреси на мрежовите интерфейси на хостовете.
+  \end{defractors}
+\end{q}
+
+\begin{q}
+  В кой слой на DoD (TCP/IP) модела е имплементирано маршрутизирането,
+  позволяващо свързването и избирането на път за пренос на данни между две
+  крайни системи?
+
+  \begin{defractors}
+  \item Приложен
+  \item Сесиен
+  \item Интернет
+  \item Канален (Network Access)
+  \end{defractors}
+\end{q}
+
+\begin{q}
+  Кои слоеве на OSI модела биват обхванати от приложния слой на DoD (TCP/IP) модела?
+
+  \begin{defractors}
+    \item Транспортен, презентационен и сесиен.
+    \item Приложен, сесиен и транспортен.
+    \item Приложен, презентационен и сесиен.
+    \item Мрежови, канален и интернет.
+  \end{defractors}
+\end{q}
+
+\begin{q}
+  Имате Linux-базирана система с един мрежови интерфейс, на който е зададен IP
+  адресът \texttt{10.16.0.154/12}. До какво ще доведе изпълнението на командата
+  \texttt{route add -net 10.0.0.0 netmask 255.240.0.0 gw 10.16.0.1}?
+
+  \begin{defractors}
+  \item Изпълнението на командата добавя в маршрутната таблица маршрут към
+    подмрежата \texttt{10.0.0.0/12} през маршрутизатор с IP адрес
+    \texttt{10.16.0.1}.
+    \item Изпълнението на командата добавя маршрут по подразбиране през
+      маршрутизатор с IP адрес \texttt{10.15.255.254}.
+    \item Изпълнението на командата ще доведе до грешка.
+    \item Изпълнението на командата води до добавяне на статичен маршрут до
+      хоста с IP адрес \texttt{10.15.255.254}.
+ \end{defractors}
+\end{q}
+
+\begin{q}
+  Кои команди се използват в Linux за модифициране на маршрутната таблица?
+
+  \begin{defractors}
+    \item \texttt{arp}
+    \item \texttt{iptables}
+    \item \texttt{ip}
+    \item \texttt{route}
+  \end{defractors}
+\end{q}
+
+\begin{q}
+  Кои флагове са вдигнати във втората протоколна единица от тристранното
+  ръкостискане на TCP?
+
+  \begin{defractors}
+    \item \texttt{SYN}
+    \item \texttt{RST}
+    \item \texttt{ACK}
+    \item Нито един от изброените.
+  \end{defractors}
+\end{q}
+
+
+\begin{q}
+  Какъв е максималният брой IP адреси, които могат да бъдат зачислени на хостове
+  в локална подмрежа с маска \texttt{255.255.255.128}?
+\end{q}
+
+\begin{q}
+  Колко подмрежи и колко адреса за хостове в подмрежа предоставя мрежовият
+  адрес \texttt{192.168.1.0/25}? Посочете broadcast адреса за дадената подмрежа.
+\end{q}
+
+\begin{q}
+  Колко адреса за хостове предлага подмрежа с 27-битова маска?
+\end{q}
+
+\begin{q}
+  Напишете адреса на подмрежата, broadcast адреса на подмрежата и интер- вала от
+  валидни адреси на хостове за следния адрес \texttt{192.168.100.25} с маска
+  \texttt{255.255.255.252}.
+\end{q}
+
+\begin{q}
+  Имате клас B мрежа и се нуждаете от 25 подмрежи. Каква мрежова маска ще
+  изберете? Колко валидни хостови адреса бихте получили в отделните подмрежи?
+\end{q}
+
+\begin{q}
+  Посочете верните твърдения относно NAT.
+
+  \begin{defractors}
+  \item Спестява публично достъпни IP адреси.
+  \item Отразява се негативно върху сигурността на мрежата.
+  \item Причинява усложнения в комуникацията на някои приложения.
+  \item Нарушава принципа на end-to-end свързаност в Интернет.
+  \end{defractors}
+\end{q}
+
+\begin{q}
+  Посочете неверните твърдения относно NAT.
+  \begin{defractors}
+  \item Отразява се негативно върху сигурността на мрежата.
+  \item Ускорява предаването на данни в Интернет.
+  \item Нарушава принципа на end-to-end свързаност в Интернет.
+  \item Спестява публично достъпни IP адреси.
+  \end{defractors}
+\end{q}
+
+\begin{q}
+  Идентифицирайте слоя от DoD (TCP/IP) модела, към който принадлежи всеки един
+  от следните протоколи:
+
+  \begin{defractors}
+    \item Internet Protocol (IP)
+    \item Telnet User Datagram Protocol (UDP)
+    \item Ethernet File
+    \item Transfer Protocol (FTP)
+  \end{defractors}
+\end{q}
+
+\begin{q}
+  Посочете характерните протоколни единици за пренос на данни (Protocol Data
+  Units) за следните протоколи:
+
+  \begin{defractors}
+  \item Internet Protocol (IP)
+  \item Ethernet
+  \item Transmission Control Protocol (TCP)
+  \end{defractors}
+\end{q}
+\end{document}
